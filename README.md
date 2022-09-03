@@ -29,6 +29,12 @@ nvm install-latest-npm # 自动安装适合当前node版本的最新npm
 3. 安装yarn
 npm install --global yarn
 
+4. 设置代理
+# yarn config set registry https://registry.npm.taobao.org/
+npm install -g http-proxy-to-socks
+hpts -s 172.22.192.1:10808 -p 8002 &
+yarn config set proxy http://127.0.0.1:8002
+yarn config set https-proxy http://127.0.0.1:8002
 ```
 
 # python
